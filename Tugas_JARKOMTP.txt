@@ -39,6 +39,12 @@ e. Reducing Windows Size:
 
 UDP adalah protokol yang menerapkan fungsi dasar dari layer transport. Model transmisinya adalah connectionless, artinya tidak harus melakukan error-checking pada device tujuan (tidak ada mekanisme handshake). Meskipun UDP tidak membutuhkan jaminan delivery dan error-checking, kecepatan transmisi data yang dilakukan lebih cepat. Tidak ada mekanisme tertentu yang dibutuhkan, UDP hanyalah protokol yang digunakan untuk mentransmisikan data dengan jalur yang sama, dan berurut, jika data hilang, aplikasi yang menanganinya, bukan UDP itu sendiri.
 
+3. Untuk establish sebuah koneksi, TCP menggunakan three-way handshake
+a. SYN: Melakukan pengecekan bahwa perangkat tujuan ada dalam koneksi jaringan dengan mengirim SYN ke server. Lalu client set segmen sequence number menjadi angka acak A
+b. SYN-ACK : sebagai respons, server mereply, yaitu dengan acknowledgement 
+
+https://www.vskills.in/certification/tutorial/information-technology/basic-network-support-professional/tcp-connection-establish-and-terminate/
+
 5. Port address adalah sebuah identifier yang digunakan untuk mengidentifikasi suatu koneksi agar bisa terhubung tanpa adanya masalah dengan membentuk berbagai komunikasi. Port address sendiri bekerja pada transport layer, dan identifier tersebut adalah port number. Penentuan port address tergantung dari pesan yang akan menjadi permintaan dan jawaban. Ketika server memproses dengan static port number yang sudah ditentukan sebelumnya, maka client secara otomatis menentukan port number untuk setiap percakapan komunikasi.
 
 6. contohnya belom
