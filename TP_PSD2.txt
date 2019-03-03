@@ -5,3 +5,19 @@
 5. Buatlah video singkat (Durasi 1 – 3 menit) mengenai cara kerja counter dan contoh implementasi dalam FPGA ( Link Youtube ditaruh di dokumen Tugas Pendahuluan ) 
  
  
+ Jawab:
+ 
+ 1. rangkaian sequensial adalah suatu rangkaian logika yang outputnya dipengaruhi oleh input dan output sebelumnya, rangkaian ini bekerja berdasarkan urutan waktu. Contoh penerapan dari rangkaian sequensial adalah flip-flop, counter, register, dan memori. Sedangkan rangkaian kombinasional adalah rangkaian yang terdiri dari gerbang logika yang outputnya bergantung pada inputnya secara langsung pada saat itu. Contoh penerapan rangkaian kombinasional adalah enkoder, dekoder, multiplexer, dan demultiplexer.
+ https://ahmadharisandi7.wordpress.com/2015/07/05/rangkaian-logika-sekuensial-dan-kombinasional/
+ 
+ 2. Latch adalah suatu penerapan dari rangkaian sequensial yang digunakan untuk penyimpan satu bit angka biner, terdiri dari 1-HIGH dan 0-LOW. Rangkaian latch yang paling sering digunakan adalah SET-RESET Latch yang menggunakan dua buah gerbang NOR atau Gerbang NAND.
+Cara kerja SR Latch adalah bila S memiliki input '1' dan R memiliki logika '0', maka output Q adalah 0, dan Q' adalah 1. Bila R memiliki input '1' dan S memiliki nilai '0' maka output Q adalah 1, dan Q' adalah 0.
+http://bocah-jaringan.blogspot.com/2016/04/sr-latch-flip-flop-rangkaian-sekuensial.html
+http://blogtekno88.blogspot.com/2016/05/pengertian-flip-flopjenis-dan-prinsip.html
+
+3. Register adalah kumpulan dari flip-flop yang bekerja secara serentak dan mampu menyimpan logika biner dengan kelipatan 4 bit (nibble).
+Selain itu, pada jenis tertentu, register mampu menggeser bit ke kiri dan ke kanan. Cara kerja, misalnya penerapan rangkaian sequential D-Flip-flop yang disusun, yaitu ketika kita ingin melakukan input data misalnya 1011, maka jika susunannya sinkronus data tersebut akan disimpan pada saat clock bernilai 1, dan load bernilai 1, namun jika rangkaiannya asinkronus hanya pada saat load bernilai 1, maka data akan masuk ke masing-masing flip-flop n-bit.
+https://teknowledge1.blogspot.com/2018/05/pengertian-fungsi-dan-macam-macam-jenis.html
+https://www.youtube.com/watch?v=-paFaxtTCkI (NESO ACADEMY)
+
+4. 
