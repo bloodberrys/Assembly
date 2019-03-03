@@ -5,7 +5,7 @@
  4. Sebutkan minimal 3 protokol yang menggunakan TCP, UDP, dan keduanya! 
  5. Jelaskan apa itu port address dan kegunaannya! 
  6. Sebutkan klasifikasi port yang ditentukan oleh IANA, beserta contoh penggunaannya! 
- 7. Gambarkan pseudo-header segment TCP dan datagram UDP untuk IPv4 dan IPv6!
+ 7. Gambarkan pseudo-header segment TCP dan datagram UDP untuk IPv4 dan IPv6! 
 
 
 
@@ -14,7 +14,7 @@ jawab:
 1. Layer transport adalah layer pada model OSI yang bertugas untuk mempersiapkan data aplikasi untuk ditransport melalui jaringan dan memproses data untuk digunakan pada layer di atasnya, yaitu layer aplikasi. Beberapa fungsi yang dimiliki oleh layer transport di dalam jaringan antara lain:
 a. Melacak komunikasi individu antara aplikasi di dalam host baik source maupun destination
 b. Memanajemen serta membagi data menjadi beberapa segmen dan mempersiapkan data tersebut untuk dikirim melalui jaringan. Dilakukannya kompresi sangat dibutuhkan pada setiap bagian data termasuk informasi yang sudah diautentikasi atau sudah diizinkan untuk dilacak. tanpa melalui proses segmentasi, hanya satu aplikasi yang dapat menerima data.
-c. Re-assemble segments back into streams of application data at the receiving host.   Prepares it to be passed back to the application layer.
+c. Re-assemble segments back into streams of application data at the receiving host. Prepares it to be passed back to the application layer. // Menyusun kembali segmen ke network flow data aplikasi di host penerima. Mempersiapkannya untuk 
 d. Identify the different applications using port numbers.  Each software process that needs to access the network is assigned a port # that is unique in that host.  Indicates which application that piece of data is associated with
 
 sumber dari cisco.
