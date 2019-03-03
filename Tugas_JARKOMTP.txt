@@ -1,0 +1,52 @@
+
+ 1. Jelaskan apa itu Transport Layer, beserta perannya/fungsinya di dalam jaringan! 
+ 2. Apa itu TCP dan UDP? Jelaskan masing-masing mekanisme kerjanya! 
+ 3. Bagaimana TCP memulai (establish) dan mengakhri (terminate) koneksinya? Jelaskan mekanisme keduanya! 
+ 4. Sebutkan minimal 3 protokol yang menggunakan TCP, UDP, dan keduanya! 
+ 5. Jelaskan apa itu port address dan kegunaannya! 
+ 6. Sebutkan klasifikasi port yang ditentukan oleh IANA, beserta contoh penggunaannya! 
+ 7. Gambarkan pseudo-header segment TCP dan datagram UDP untuk IPv4 dan IPv6!
+
+
+
+jawab:
+
+1. Layer transport adalah layer pada model OSI yang bertugas untuk mempersiapkan data aplikasi untuk ditransport melalui jaringan dan memproses data untuk digunakan pada layer di atasnya, yaitu layer aplikasi. Beberapa fungsi yang dimiliki oleh layer transport di dalam jaringan antara lain:
+a. Melacak komunikasi individu antara aplikasi di dalam host baik source maupun destination
+b. Memanajemen serta membagi data menjadi beberapa segmen dan mempersiapkan data tersebut untuk dikirim melalui jaringan. Dilakukannya kompresi sangat dibutuhkan pada setiap bagian data termasuk informasi yang sudah diautentikasi atau sudah diizinkan untuk dilacak. tanpa melalui proses segmentasi, hanya satu aplikasi yang dapat menerima data.
+c. Re-assemble segments back into streams of application data at the receiving host.   Prepares it to be passed back to the application layer.
+d. Identify the different applications using port numbers.  Each software process that needs to access the network is assigned a port # that is unique in that host.  Indicates which application that piece of data is associated with
+
+sumber dari cisco.
+Modul praktikum 3 cisco networking laboratory
+
+2. TCP merupakan salah satu protokol yang berorientasi sambungan (connection-oriented) artinya adalah TCP melakukan pengiriman data dari satu device ke device lain seperti halnya berjabat tangan, karena memiliki tambahan header supaya koneksi dapat berjalan dengan baik dan aman, serta dapat mengontrol alur data pengiriman. TCP mampu melakukan error-checking, maka dari itu TCP adalah protokol yang menjamin semua data bisa dikirim sampai tujuan, sistem yang dimaksud adalah multihandshake. Mekanisme pada TCP sesuai three way handshake :
+a. Melakukan pengecekan bahwa perangkat tujuan ada dalam koneksi jaringan
+b. melakukan verifikasi (servicenya aktif) dengan perangkat tujuan, dengan melakukan permintaan port number ke tujuan untuk melakukan pengiriman data oleh client pada layer session 
+c. menginformasikan perangkat tujuan bahwa ada client yang akan melakukan session pada port number tersebut.
+Mekanisme sambungannya:
+a. Segment Reassembly
+   Pengurutan paket yang diterima sesuai urutan
+b. Acknoledgement with windowing
+   Pemberitahuan bahwa perangkat tujuan menerima paket data yang dikirim secara sempurna 
+c. Retransmission
+   Pengiriman ulang paket data yang hilang atau tidak sampai tujuan
+d. Flow Control
+   Mengantisipasi terjadinya overflow data
+e. Reducing Windows Size:
+   Mengurangi besaran pengiriman acknowledgement ke perangkat tujuan
+
+
+UDP adalah protokol yang menerapkan fungsi dasar dari layer transport. Model transmisinya adalah connectionless, artinya tidak harus melakukan error-checking pada device tujuan (tidak ada mekanisme handshake). Meskipun UDP tidak membutuhkan jaminan delivery dan error-checking, kecepatan transmisi data yang dilakukan lebih cepat. Tidak ada mekanisme tertentu yang dibutuhkan, UDP hanyalah protokol yang digunakan untuk mentransmisikan data dengan jalur yang sama, dan berurut, jika data hilang, aplikasi yang menanganinya, bukan UDP itu sendiri.
+
+5. Port address adalah sebuah identifier yang digunakan untuk mengidentifikasi suatu koneksi agar bisa terhubung tanpa adanya masalah dengan membentuk berbagai komunikasi. Port address sendiri bekerja pada transport layer, dan identifier tersebut adalah port number. Penentuan port address tergantung dari pesan yang akan menjadi permintaan dan jawaban. Ketika server memproses dengan static port number yang sudah ditentukan sebelumnya, maka client secara otomatis menentukan port number untuk setiap percakapan komunikasi.
+
+6. contohnya belom
+a. Wellknown port yaitu port number yang sudah ditetapkan untuk service aplikasi, contohnya HTTP, telnet, POP3, dll. Menggunakan port range 0 sampai dengan 1023
+b. Registered Ports yaitu digunakan untuk penggunaan pribadi dan juga aplikasi yang bersifat individu. Ketika tidak mengambil source dari server, port ini akan berkamuflase sebagai source port. Port range: 1024 sampai dengan 49151
+c. Private/Dynamic Ports atau disebut juga dengan Ephemeral Ports, dikgunakan pada saat client pertama kali melakukan koneksi. 49152 sampai 65535
+
+
+7. 
+
+
