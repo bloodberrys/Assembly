@@ -1,0 +1,7 @@
+1. Jelaskan perbedaan rangkaian Sekuensial dan Kombinasional 
+2. Jelaskan definisi dan cara kerja Latch 
+3. Jelaskan definisi dan cara kerja Register 
+4. Buatlah suatu program VHDL yang memiliki fungsi Latch 
+5. Buatlah video singkat (Durasi 1 – 3 menit) mengenai cara kerja counter dan contoh implementasi dalam FPGA ( Link Youtube ditaruh di dokumen Tugas Pendahuluan ) 
+ 
+ 
