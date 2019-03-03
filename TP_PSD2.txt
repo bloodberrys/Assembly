@@ -20,4 +20,58 @@ Selain itu, pada jenis tertentu, register mampu menggeser bit ke kiri dan ke kan
 https://teknowledge1.blogspot.com/2018/05/pengertian-fungsi-dan-macam-macam-jenis.html
 https://www.youtube.com/watch?v=-paFaxtTCkI (NESO ACADEMY)
 
-4. 
+4. SR Latch
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity S_R_latch_top is
+    Port ( S : in    STD_LOGIC;
+           R : in    STD_LOGIC;
+           Q : out   STD_LOGIC);
+end S_R_latch_top;
+
+architecture Behavioral of S_R_latch_top is
+signal Q2   : STD_LOGIC;
+signal notQ : STD_LOGIC;
+begin
+
+Q    <= Q2;
+Q2   <= R nor notQ;
+notQ <= S nor Q2;
+
+end Behavioral;
+
+
+
+5. 
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity Counter2_VHDL is
+   port( Clock_enable_B: in std_logic;
+ 	 Clock: in std_logic;
+ 	 Reset: in std_logic;
+ 	 Output: out std_logic_vector(0 to 3));
+end Counter2_VHDL;
+ 
+architecture Behavioral of Counter2_VHDL is
+   signal temp: std_logic_vector(0 to 3);
+begin   process(Clock,Reset)
+   begin
+      if Reset='1' then
+         temp <= "0000";
+      elsif(rising_edge(Clock)) then
+         if Clock_enable_B='0' then
+            if temp="1001" then
+               temp<="0000";
+            else
+               temp <= temp + 1;
+            end if;
+         end if;
+      end if;
+   end process;
+   Output <= temp;
+end Behavioral;
